@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Inter", serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 30%;
+    padding: 2rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 
+            0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+heading {
+    padding: 20px 0;
+
+    position: relative;
+}
+
+.strike {
+    width: 100%;
+    height: 0.9px;
+
+    background-color: #C8C8C8;
+}
+
+h1 {
+    padding: 8px;
+
+    font-size: 20px;
+    font-weight: 600;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    
+    color: #FF6B82;
+    background-color: #fff;
+}
+
+#boxes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.box {
+    width: 100%;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    border: 0.9px solid #C8C8C8;
+}
+
+.box.is-popular {
+    border: 2px solid #FF6B82;
+    background-color: #ff6b8118;
+}
+
+.upper-box {
+    height: 80px;
+    padding: 10px;
+
+    display: flex;
+    gap: 10px;
+
+    position: relative;
+}
+
+.popular-tag {
+    padding: 3px 8px;
+
+    position: absolute;
+    top: -10px;
+    right: 8px;
+    z-index: 2;
+
+    
+    font-size: 12px;
+    font-weight: bold;
+    
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #FF6B82;
+}
+
+/* Adding the folded effect */
+.popular-tag::before {
+    content: "";
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    bottom: 12px;
+    left: -18px;
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid #C94E63;
+    border-top: 8px solid  transparent;
+}
+
+.popular-tag::after {
+    content: "";
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    bottom: 12px;
+    right: -18px;
+
+    border-left: 10px solid #C94E63;
+    border-right: 10px solid transparent;
+    border-top: 8px solid  transparent;
+}
+
+
+.box-content {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unit-offer {
+    margin-bottom: 2px;
+
+    display: flex;
+    gap: 6px;
+}
+
+.unit-heading {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.offer {
+    padding: 2px 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    color: #fff;
+    background: #FF6B82;
+
+}
+
+.standard-txt {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.offer-price {
+    margin-bottom: 2px;
+
+    font-size: 14.46;
+    font-weight: 500;
+
+}
+
+.og-price {
+    font-size: 10px;
+    font-weight: 400;
+
+    text-decoration: line-through;
+    color: rgb(186, 185, 185);
+}
+
+.lower-box {
+    padding: 10px 10px 10px 30px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+th {
+    padding-bottom: 3px;
+
+    text-align: left;
+    font-weight: 400;
+}
+
+.dropdown {
+    width: 100px;
+    padding: 5px;
+
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.lower-box {
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+.lower-box.expanded {
+    display: block;
+}
+
+.total-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fd-text {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #FF6B82;
+}
+
+.total {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.add-to-cart {
+    width: 100%;
+    height: 40;
+    padding: 10px;
+   
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background: #FF6B82;
+    cursor: pointer;
+}
+
+.powered-by {
+    display: flex;
+    justify-content: end;
+
+    font-size: 12px;
+    font-style: italic;
+
+    color: #00000066;
+}
+
+.radio-btn {
+    width: 17.5px;
+    height: 16px;
+    margin-top: 20px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    border: 2px solid #FF6B82;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-btn:checked {
+    border: 2px solid #FF6B82;
+}
+
+.radio-btn:checked::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #FF6B82;
+}
+
+@media screen and (max-width: 1250px) {
+    .container {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 990px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+}
